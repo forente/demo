@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="snackApp">
+  <head>
+    <meta charset="utf-8">
+    <title>$http</title>
+    <script src="vendor/angular.min.js" charset="utf-8"></script>
+    <script src="js/client.js" charset="utf-8"></script>
+  </head>
+  <body ng-controller="SnackController">
+    <h1>Exploring $http</h1>
+
+    <h1 ng-show="showError">EVERYTHING IS BROKEN!!!!</h1>
+    <input type='text' ng-model="input"/>
+
+
+    <button ng-click="addSnack()">Add a snack!</button>
+
+    <ul>
+      <li ng-repeat="snack in snacks track by $index">
+        {{snack}}
+      </li>
+    </ul>
+
+
+  </body>
+</html>

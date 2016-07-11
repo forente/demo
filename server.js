@@ -5,6 +5,9 @@ var snacks = require('./routes/snacks');
 
 var app = express();
 
+// static files
+app.use(express.static('public'));
+
 //Configs
 app.use(bodyParser.json());
 
